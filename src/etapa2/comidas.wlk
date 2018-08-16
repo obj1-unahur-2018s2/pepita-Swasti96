@@ -44,3 +44,21 @@ object mijo {
 		else{return 20}
 	}
 }
+
+object canelones {
+	var salsa = true
+	var queso = true
+	
+	method conSalsa(){
+		salsa = true
+	}
+	method conQueso() {
+		queso = false
+	}
+	
+	method energiaPorGramo(){
+		if(salsa){return 25}
+		else(queso){return 27}
+	}
+	
+}
