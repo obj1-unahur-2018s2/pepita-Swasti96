@@ -46,19 +46,23 @@ object mijo {
 }
 
 object canelones {
-	var salsa = true
-	var queso = true
+	var queso = false
+	var salsa = false
 	
-	method conSalsa(){
-		salsa = true
-	}
-	method conQueso() {
-		queso = false
+	method conSalsa(sal){
+		if(sal){salsa = true}
+		else salsa = false
+		}
+		
+	method conQueso(que) {
+		if(que){queso = true}
+		else queso = false
 	}
 	
 	method energiaPorGramo(){
-		if(salsa){return 25}
-		else(queso){return 27}
+	  var cane = 20
+		if(salsa){cane += 5}
+		if(queso){cane += 7}
+		return cane
 	}
-	
 }
