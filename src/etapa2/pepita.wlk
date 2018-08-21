@@ -10,7 +10,7 @@ object gnomo {
 	method volar(kms) { energia -= kms + 10 }
 	
 	// metodos nuevos
-	method estaDebil() { return energia > 50}  // implementar
+	method estaDebil() { return energia < 50}  // implementar
 	method estaFeliz() { return energia.between(500,1000)}  // implementar
 	
 	method cuantoQuiereVolar() { 
@@ -30,8 +30,18 @@ object gnomo {
 	
 	method haceLoQueQuieras() { 
 		if (self.estaDebil()) {
+			self.comer(alpiste,20)
 			// completar
 		} 
+		
+		else if(self.estaFeliz()){
+			self.volar(8)
+		}
+		
+		else{
+			
+		}	
+		
 		// completar el método, de acuerdo a la estructura
 		// que se deja comentada aca abajo
 //		else if (... otra condicion ...) {
