@@ -1,18 +1,19 @@
 
 object pepon {
-	// aca falta un atributo
 	
-	method comer(cosa, cuanto) { }  // implementar
-	method volar(kms) { }           // implementar
-	method haceLoQueQuieras() { }   // implementar
+	var energia = 0
+	method comer(cosa, cuanto) {energia += 40 } 
+	method volar(kms) {energia-= 0.5 * kms + 1 }          
+	method haceLoQueQuieras() {energia -= 1.5  }  
 }
 
-// implementar el objeto entero, salvo haceLoQueQuieras que lo damos hecho
-// ayuda: conviene ponerle dos atributos
+
 object pipa {
-	/*
-	 * cuando le dicen a pipa que haga lo que quiera, no hace nada
-	 */
-	method haceLoQueQuieras() { }   // queda asi
-	// pregunta: ¿por qué es necesario agregar este método, sin código
+	var acuComer = 0
+	var acuVolar = 0
+	method comer(cosa,cuanto){acuComer += cuanto}
+	method volar(kms){acuVolar += kms}
+	method kmsRecorridos(){return acuVolar}
+	method gramosIngeridos(){return acuComer}
+	method haceLoQueQuieras() { }   
 }
