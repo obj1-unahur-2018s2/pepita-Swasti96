@@ -14,6 +14,7 @@ object roque {
 		pupilo.volar(10)
 		pupilo.comer(alpiste, 300)
 		pupilo.volar(5)
+	
+		
 	}  // implementar
-	method pupiloActual(){return pupilo}
 }

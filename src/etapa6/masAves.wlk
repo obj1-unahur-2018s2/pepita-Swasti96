@@ -1,4 +1,4 @@
-import comidas.*
+
 object pepon {
 	
 	var energia = 0
